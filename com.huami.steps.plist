@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.huami.steps</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/songhao/.nvm/versions/node/v20.20.2/bin/node</string>
+        <string>/Users/songhao/huami-steps/huami-steps.js</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/songhao/huami-steps</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartCalendarInterval</key>
+    <array>
+        <!-- 每30分钟，7:00-21:00 -->
+        <dict>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/songhao/huami-steps/huami-steps.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/songhao/huami-steps/huami-steps.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/Users/songhao/.nvm/versions/node/v20.20.2/bin</string>
+        <key>HOME</key>
+        <string>/Users/songhao</string>
+    </dict>
+</dict>
+</plist>

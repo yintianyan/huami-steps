@@ -1,0 +1,220 @@
+{
+  "accounts": [
+    {
+      "account": "201314yty@gmail.com",
+      "password": "YOUR_PASSWORD",
+      "profile": null
+    }
+  ],
+  "incrementRange": {
+    "min": 200,
+    "max": 600
+  },
+  "dailyMaxSteps": {
+    "min": 5000,
+    "max": 7500
+  },
+  "delaySeconds": 10,
+  "retry": {
+    "maxRetries": 3,
+    "baseDelaySeconds": 30,
+    "maxDelaySeconds": 300,
+    "backoffMultiplier": 2
+  },
+  "schedule": {
+    "type": "interval",
+    "intervalMinutes": 30,
+    "startHour": 7,
+    "endHour": 21
+  },
+  "realism": {
+    "enabled": true,
+    "nightShift": {
+      "enabled": true,
+      "autoDetect": true,
+      "firstNightShiftMonday": "2026-05-25",
+      "hourShift": 7,
+      "activityMultiplier": 0.85,
+      "dailyTargetAdjust": 0.85,
+      "skipIncrease": 0.03,
+      "burstDecrease": 0.05
+    },
+    "timeProfile": {
+      "sleep": {
+        "hours": [
+          0,
+          6
+        ],
+        "increment": {
+          "min": 0,
+          "max": 0
+        },
+        "skipChance": 1,
+        "burstChance": 0,
+        "desc": "💤 睡眠"
+      },
+      "morning": {
+        "hours": [
+          7,
+          7
+        ],
+        "increment": {
+          "min": 150,
+          "max": 400
+        },
+        "skipChance": 0.12,
+        "burstChance": 0.08,
+        "desc": "🌅 早起"
+      },
+      "commuteAm": {
+        "hours": [
+          8,
+          9
+        ],
+        "increment": {
+          "min": 300,
+          "max": 700
+        },
+        "skipChance": 0.05,
+        "burstChance": 0.15,
+        "desc": "🚇 早通勤"
+      },
+      "officeAm": {
+        "hours": [
+          10,
+          11
+        ],
+        "increment": {
+          "min": 20,
+          "max": 150
+        },
+        "skipChance": 0.3,
+        "burstChance": 0.06,
+        "desc": "💼 上午办公"
+      },
+      "lunch": {
+        "hours": [
+          12,
+          12
+        ],
+        "increment": {
+          "min": 100,
+          "max": 500
+        },
+        "skipChance": 0.1,
+        "burstChance": 0.1,
+        "desc": "🍜 午餐"
+      },
+      "nap": {
+        "hours": [
+          13,
+          13
+        ],
+        "increment": {
+          "min": 10,
+          "max": 60
+        },
+        "skipChance": 0.6,
+        "burstChance": 0,
+        "desc": "😴 午休"
+      },
+      "officePm": {
+        "hours": [
+          14,
+          16
+        ],
+        "increment": {
+          "min": 20,
+          "max": 150
+        },
+        "skipChance": 0.3,
+        "burstChance": 0.06,
+        "desc": "💼 下午办公"
+      },
+      "commutePm": {
+        "hours": [
+          17,
+          18
+        ],
+        "increment": {
+          "min": 300,
+          "max": 700
+        },
+        "skipChance": 0.05,
+        "burstChance": 0.15,
+        "desc": "🚇 晚通勤"
+      },
+      "evening": {
+        "hours": [
+          19,
+          20
+        ],
+        "increment": {
+          "min": 200,
+          "max": 700
+        },
+        "skipChance": 0.06,
+        "burstChance": 0.2,
+        "desc": "🏃 晚间活跃"
+      },
+      "night": {
+        "hours": [
+          21,
+          22
+        ],
+        "increment": {
+          "min": 30,
+          "max": 300
+        },
+        "skipChance": 0.2,
+        "burstChance": 0.06,
+        "desc": "🏠 居家"
+      },
+      "lateNight": {
+        "hours": [
+          23,
+          23
+        ],
+        "increment": {
+          "min": 0,
+          "max": 80
+        },
+        "skipChance": 0.7,
+        "burstChance": 0,
+        "desc": "🌙 深夜"
+      }
+    },
+    "weekendHourShift": 2,
+    "weekendMultiplier": 0.7,
+    "burstMultiplier": {
+      "min": 1.5,
+      "max": 3
+    },
+    "walkEvent": {
+      "chance": 0.04,
+      "steps": {
+        "min": 500,
+        "max": 1200
+      }
+    },
+    "dailyMaxSteps": {
+      "weekday": {
+        "min": 5000,
+        "max": 7500
+      },
+      "weekend": {
+        "min": 3000,
+        "max": 5000
+      }
+    },
+    "afterTargetChance": 0.1,
+    "_dailyTargetUserSet": true,
+    "deceleration": true,
+    "distribution": "triangular",
+    "preset": "office-worker",
+    "smart": true,
+    "city": "Shenzhen",
+    "_customProfile": true
+  },
+  "webhookUrl": ""
+}
