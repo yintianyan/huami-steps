@@ -229,7 +229,7 @@ async function main() {
     }
   }
 
-  const engineOptions = { today, smart: smartOn, weatherModifier, weatherDesc, hour: chinaHour() };
+  const engineOptions = { today, smart: smartOn, weatherModifier, weatherDesc, hour: require('./lib/time').chinaHour() };
 
   // 📝 单行执行头
   const tpHeader = realismOn ? getTimeProfile(realism, incMin, incMax, engineOptions) : null;
